@@ -80,11 +80,39 @@ const API_SITES = {
         api: 'https://api.maoyanapi.top/api.php/provide/vod',
         name: '猫眼资源',
     },
-    testSource: {
-        api: 'https://www.example.com/api.php/provide/vod',
-        name: '空内容测试源',
-        adult: true
-    }
+   jkun: {
+    api: 'https://jkunzyapi.com/api.php/provide/vod',
+    name: 'jKun资源',
+    adult: true,
+},
+r155: {
+    api: 'https://155api.com/api.php/provide/vod',
+    name: '155资源',
+    adult: true,
+},
+huangcang: {
+    api: 'https://hsckzy.vip/api.php/provide/vod',
+    name: '黄色仓库',
+    adult: true,
+},
+yutu: {
+    api: 'https://yutuzy10.com/api.php/provide/vod',
+    name: '玉兔资源',
+    adult: true,
+},
+ckzy: {
+    api: 'https://www.ckzy1.com/api.php/provide/vod',
+    name: 'CK资源',
+    adult: true,
+},
+huya: {
+    api: 'https://www.huyaapi.com/api.php/provide/vod',
+    name: '虎牙资源',
+},
+uku: {
+    api: 'https://api.ukuapi88.com/api.php/provide/vod',
+    name: 'U酷资源',
+},
     //ARCHIVE https://telegra.ph/APIs-08-12
 };
 
