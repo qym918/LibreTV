@@ -656,9 +656,19 @@ async function search() {
             }
         });
 
-        // 对搜索结果进行排序：按名称优先，名称相同时按接口源排序
+        // 对搜索结果进行排序：先按与搜索词的相关性（精确匹配 > 开头匹配 > 包含 > 其他），再按名称、来源排序
+        const queryLower = query.toLowerCase();
+        const relevance = (name) => {
+            const n = (name || '').toLowerCase();
+            if (n === queryLower) return 0;
+            if (n.startsWith(queryLower)) return 1;
+            if (n.includes(queryLower)) return 2;
+            return 3;
+        };
         allResults.sort((a, b) => {
-            // 首先按照视频名称排序
+            const relevanceCompare = relevance(a.vod_name) - relevance(b.vod_name);
+            if (relevanceCompare !== 0) return relevanceCompare;
+            // 相关性相同，按视频名称排序
             const nameCompare = (a.vod_name || '').localeCompare(b.vod_name || '');
             if (nameCompare !== 0) return nameCompare;
             

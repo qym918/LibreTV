@@ -21,7 +21,65 @@ const SITE_CONFIG = {
 };
 
 // API站点配置
+// 2026-11-22 实测可用 13 源（搜“生化危机”返回匹配结果）；已移除 9 个坏源：
+// 最大资源（无视搜索词，返回全站 12.6 万条）、黑木耳（302）、华为吧（人机验证）、
+// 魔爪/卧龙（机器人检测页）、天涯（暂不支持搜索）、旺旺短剧（301）、樱花（403）、豆瓣资源（连不上）
 const API_SITES = {
+    dyttzy: {
+        api: 'http://caiji.dyttzyapi.com/api.php/provide/vod',
+        name: '电影天堂资源',
+        detail: 'http://caiji.dyttzyapi.com',
+    },
+    ruyi: {
+        api: 'https://cj.rycjapi.com/api.php/provide/vod',
+        name: '如意资源',
+    },
+    bfzy: {
+        api: 'https://bfzyapi.com/api.php/provide/vod',
+        name: '暴风资源',
+    },
+    ffzy: {
+        api: 'http://ffzy5.tv/api.php/provide/vod',
+        name: '非凡影视',
+        detail: 'http://ffzy5.tv',
+    },
+    zy360: {
+        api: 'https://360zy.com/api.php/provide/vod',
+        name: '360资源',
+    },
+    iqiyi: {
+        api: 'https://www.iqiyizyapi.com/api.php/provide/vod',
+        name: 'iqiyi资源',
+    },
+    jisu: {
+        api: 'https://jszyapi.com/api.php/provide/vod',
+        name: '极速资源',
+        detail: 'https://jszyapi.com',
+    },
+    mdzy: {
+        api: 'https://www.mdzyapi.com/api.php/provide/vod',
+        name: '魔都资源',
+    },
+    baidu: {
+        api: 'https://api.apibdzy.com/api.php/provide/vod',
+        name: '百度云资源'
+    },
+    wujin: {
+        api: 'https://api.wujinapi.me/api.php/provide/vod',
+        name: '无尽资源'
+    },
+    ikun: {
+        api: 'https://ikunzyapi.com/api.php/provide/vod',
+        name: 'iKun资源'
+    },
+    ysgc: {
+        api: 'https://cj.lziapi.com/api.php/provide/vod',
+        name: '影视工厂',
+    },
+    maoyan: {
+        api: 'https://api.maoyanapi.top/api.php/provide/vod',
+        name: '猫眼资源',
+    },
     testSource: {
         api: 'https://www.example.com/api.php/provide/vod',
         name: '空内容测试源',
